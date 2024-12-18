@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  font-family: "DM Sans", serif;
+  font-size: 18px;
+}
+body {
+  background-color: #f0ebeb;
+}
+
+/* 
+======================
+======================
+=   Shared styles    =
+======================
+======================
+*/
+
+#grid-container {
+  padding: 20px;
+}
+
+#grid-firstsection div,
+#grid-secondsection div {
+  margin: 0 0 20px 0;
+  border-radius: 10px;
+}
+
+#grid-firstsection-1,
+#grid-firstsection-5 {
+  background-color: #7650dc;
+  color: #ffffff;
+}
+
+#grid-firstsection-1,
+#grid-firstsection-5,
+#grid-firstsection-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#grid-firstsection-2,
+#grid-firstsection-6 {
+  background-color: #ffffff;
+}
+
+/* 
+======================
+======================
+=Grid styles         =
+======================
+======================
+*/
+
+#grid-firstsection-1 {
+  padding: 20px;
+}
+
+#grid-firstsection-2 {
+  padding: 20px;
+}
+
+#grid-firstsection-3 {
+  overflow: hidden;
+  padding: 20px 20px 0 20px;
+  background-color: #ffcb6b;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#grid-firstsection-4 {
+  padding: 40px 20px;
+  background-color: #dacffc;
+}
+
+#grid-firstsection-5 {
+  padding: 20px 0;
+}
+
+#grid-firstsection-6 {
+  padding: 25px;
+}
+
+#grid-secondsection-1 {
+  padding: 20px;
+  background-color: #f9eee1;
+}
+
+#grid-secondsection-2 {
+  padding: 20px;
+  background-color: #ffcb6b;
+}
+
+/* 
+======================
+======================
+=Grid content styles =
+======================
+======================
+*/
+
+#grid-firstsection-1 h1 {
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#ten-x {
+  color: #ffcb6b;
+}
+
+#five-stars {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+#grid-firstsection-2 h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#multiple-platforms {
+  max-width: 100%;
+  height: auto;
+}
+
+#grid-firstsection-3 h2 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+#consistent-schedule {
+  max-width: 70%;
+  height: auto;
+}
+
+#grid-firstsection-4 h2 {
+  font-weight: 500;
+  text-align: center;
+}
+
+#schedule-posts {
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+}
+
+#grid-firstsection-4 p {
+  font-weight: 500;
+  text-align: center;
+}
+
+#grow-followers {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 10%;
+}
+
+#grid-firstsection-5 h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 25%;
+}
+
+#grid-firstsection-6 h1 {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+#grid-firstsection-6 p {
+  margin: 20px 0;
+}
+
+#audience-growth {
+  max-width: 50%;
+  height: auto;
+}
+
+#grid-secondsection-1 h1 {
+  font-weight: 500;
+}
+
+#grid-secondsection-1 em {
+  color: #7650dc;
+}
+
+#create-post {
+  max-width: 50%;
+  margin: 20px 0;
+}
+
+#grid-secondsection-2 h1 {
+  font-weight: 500;
+}
+
+#ai-content {
+  max-width: 60%;
+  margin-top: 20px;
+}
+
+@media (min-width: 576px) {
+  #grid-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80vw;
+    height: 100%;
+    margin: auto;
+    gap: 20px;
+  }
+
+  #grid-container div {
+    margin: 0;
+  }
+
+  #grid-secondsection {
+    flex-basis: 20%;
+    margin: 20px;
+  }
+
+  #grid-secondsection div {
+    height: 50%;
+  }
+
+  #grid-firstsection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40% auto auto;
+    grid-template-areas:
+      "alias-gfs1 alias-gfs1 alias-gfs4"
+      "alias-gfs2 alias-gfs3 alias-gfs4"
+      "alias-gfs6 alias-gfs5 alias-gfs5";
+    gap: 20px;
+  }
+
+  #grid-firstsection-1 {
+    grid-area: alias-gfs1;
+  }
+
+  #grid-firstsection-2 {
+    grid-area: alias-gfs2;
+  }
+
+  #grid-firstsection-3 {
+    grid-area: alias-gfs3;
+  }
+
+  #grid-firstsection-4 {
+    grid-area: alias-gfs4;
+  }
+
+  #grid-firstsection-5 {
+    grid-area: alias-gfs5;
+    flex-direction: row;
+  }
+  #grid-firstsection-5 h2 {
+    margin: 0;
+    padding: 20px 20px 0 0;
+  }
+
+  #audience-growth {
+    margin: 0;
+    padding-right: 20px;
+  }
+
+  #grid-firstsection-6 {
+    grid-area: alias-gfs6;
+  }
+}
